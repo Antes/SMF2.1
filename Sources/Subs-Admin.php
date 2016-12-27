@@ -18,7 +18,7 @@ if (!defined('SMF'))
 
 /**
  * Get a list of versions that are currently installed on the server.
- * @param array $checkFor An array of what to check versions for - can contain one or more of 'gd', 'imagemagick', 'db_server', 'phpa', 'memcache', 'xcache', 'apc', 'php' or 'server'
+ * @param string[] $checkFor An array of what to check versions for - can contain one or more of 'gd', 'imagemagick', 'db_server', 'phpa', 'memcache', 'xcache', 'apc', 'php' or 'server'
  * @return array An array of versions (keys are same as what was in $checkFor, values are the versions)
  */
 function getServerVersions($checkFor)

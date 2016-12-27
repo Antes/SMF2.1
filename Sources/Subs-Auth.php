@@ -150,7 +150,7 @@ function setTFACookie($cookie_length, $id, $secret, $preserve = false)
  *
  * @param bool $local Whether we want local cookies
  * @param bool $global Whether we want global cookies
- * @return array An array to set the cookie on with domain and path in it, in that order
+ * @return string An array to set the cookie on with domain and path in it, in that order
  */
 function url_parts($local, $global)
 {

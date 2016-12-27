@@ -566,7 +566,7 @@ function getCommentModDetails($comment_id)
  *
  * @param int $report_id The report ID is used to fire a notification about the event.
  * @param array $data a formatted array of data to be inserted. Should be already properly sanitized.
- * @return bool  Boolean false if no data was provided.
+ * @return false|null  Boolean false if no data was provided.
  */
 function saveModComment($report_id, $data)
 {
@@ -632,8 +632,8 @@ function saveModComment($report_id, $data)
  * Saves the new information whenever a moderator comment is edited.
  *
  * @param int $comment_id The edited moderator comment ID.
- * @param array $data The new data to de inserted. Should be already properly sanitized.
- * @return bool  Boolean false if no data or no comment ID was provided.
+ * @param string $edited_comment
+ * @return false|null  Boolean false if no data or no comment ID was provided.
  */
 function editModComment($comment_id, $edited_comment)
 {
@@ -657,7 +657,7 @@ function editModComment($comment_id, $edited_comment)
  * Deletes a moderator comment from the DB.
  *
  * @param int $comment_id The moderator comment ID used to identify which report will be deleted.
- * @return bool  Boolean false if no data was provided.
+ * @return false|null  Boolean false if no data was provided.
  */
 function deleteModComment($comment_id)
 {

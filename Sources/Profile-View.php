@@ -2605,7 +2605,7 @@ function list_getGroupRequestsCount($memID)
  * @param int $start Which item to start with (for pagination purposes)
  * @param int $items_per_page How many items to show on each page
  * @param string $sort A string indicating how to sort the results
- * @param int $memID The ID of the member
+ * @param string $memID The ID of the member
  * @return array An array of information about the user's group requests
  */
 function list_getGroupRequests($start, $items_per_page, $sort, $memID)

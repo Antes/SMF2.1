@@ -475,7 +475,7 @@ function set_fatal_error_headers()
  * Used by fatal_error(), fatal_lang_error()
  *
  * @param string $error The error
- * @param array $sprintf An array of data to be sprintf()'d into the specified message
+ * @param boolean $sprintf An array of data to be sprintf()'d into the specified message
  */
 function log_error_online($error, $sprintf = array())
 {

@@ -402,7 +402,7 @@ class paypal_payment
 	 * A private function to find out the subscription details.
 	 *
 	 * @access private
-	 * @return boolean|void False on failure, otherwise just sets $_POST['item_number']
+	 * @return false|null False on failure, otherwise just sets $_POST['item_number']
 	 */
 	private function _findSubscription()
 	{

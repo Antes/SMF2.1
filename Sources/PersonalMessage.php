@@ -4070,7 +4070,7 @@ function LoadRules($reload = false)
  *
  * @param int $pmID The ID of the PM
  * @param string $validFor Which folders this is valud for - can be 'inbox', 'outbox' or 'in_or_outbox'
- * @return boolean Whether the PM is accessible in that folder for the current user
+ * @return boolean|null Whether the PM is accessible in that folder for the current user
  */
 function isAccessiblePM($pmID, $validFor = 'in_or_outbox')
 {

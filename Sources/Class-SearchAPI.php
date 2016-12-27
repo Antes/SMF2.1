@@ -56,6 +56,7 @@ interface search_api_interface
 	 * @param array $wordsSearch Search words
 	 * @param array $wordsExclude Words to exclude
 	 * @param bool $isExcluded Whether the specfied word should be excluded
+	 * @return void
 	 */
 	public function prepareIndexes($word, array &$wordsSearch, array &$wordsExclude, $isExcluded);
 
@@ -130,7 +131,7 @@ interface search_api_interface
 	 * @param array $excludedIndexWords Indexed words that should be excluded
 	 * @param array $participants
 	 * @param array $searchArray
-	 * @return mixed
+	 * @return integer
 	 */
 	public function searchQuery(array $query_params, array $searchWords, array $excludedIndexWords, array &$participants, array &$searchArray);
 }

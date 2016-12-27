@@ -1096,7 +1096,7 @@ function template_install_options()
 /**
  * CHMOD control form
  *
- * @return bool False if nothing to do.
+ * @return false|null False if nothing to do.
  */
 function template_control_chmod()
 {

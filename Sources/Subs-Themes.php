@@ -425,7 +425,7 @@ function theme_install($to_install = array())
  *
  * This is a recursive function, it will call itself if there are subdirs inside the main directory.
  * @param string $path The absolute path to the directory to be removed
- * @return bool true when success, false on error.
+ * @return false|null true when success, false on error.
  */
 function remove_dir($path)
 {

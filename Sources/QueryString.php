@@ -325,7 +325,7 @@ function cleanRequest()
  * Validates a IPv6 address. returns true if it is ipv6.
  *
  * @param string $ip The ip address to be validated
- * @return boolean Whether the specified IP is a valid IPv6 address
+ * @return false|string Whether the specified IP is a valid IPv6 address
  */
 function isValidIPv6($ip)
 {

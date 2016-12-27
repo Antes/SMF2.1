@@ -279,7 +279,7 @@ class Auth
 	/**
 	 * Generate the timestamp for the calculation
 	 *
-	 * @return integer Timestamp
+	 * @return double Timestamp
 	 */
 	public function generateTimestamp()
 	{
@@ -290,7 +290,7 @@ class Auth
 	 * Truncate the given hash down to just what we need
 	 *
 	 * @param string $hash Hash to truncate
-	 * @return string Truncated hash value
+	 * @return integer Truncated hash value
 	 */
 	public function truncateHash($hash)
 	{

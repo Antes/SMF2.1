@@ -243,6 +243,7 @@ function deleteMembergroups($groups)
  * @param null|array The groups to remove the member(s) from. If null, the specified members are stripped from all their membergroups.
  * @param bool $permissionCheckDone Whether we've already checked permissions prior to calling this function
  * @param bool $ignoreProtected Whether to ignore protected groups
+ * @param integer $groups
  * @return bool Whether the operation was successful
  */
 function removeMembersFromGroups($members, $groups = null, $permissionCheckDone = false, $ignoreProtected = false)

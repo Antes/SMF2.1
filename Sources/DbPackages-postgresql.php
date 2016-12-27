@@ -518,7 +518,7 @@ function smf_db_change_column($table_name, $old_column, $column_info, $parameter
  * @param array $parameters Not used?
  * @param string $if_exists What to do if the index exists. If 'update', the definition will be updated.
  * @param string $error
- * @return boolean Whether or not the operation was successful
+ * @return false|null Whether or not the operation was successful
  */
 function smf_db_add_index($table_name, $index_info, $parameters = array(), $if_exists = 'update', $error = 'fatal')
 {

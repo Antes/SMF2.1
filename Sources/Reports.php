@@ -1013,7 +1013,7 @@ function addData($inc_data, $custom_table = null)
  * @param string $title The title of the separator
  * @param null|string $custom_table The ID of the custom table
  *
- * @return void|bool Returns false if there are no tables
+ * @return null|false Returns false if there are no tables
  */
 function addSeparator($title = '', $custom_table = null)
 {

@@ -257,7 +257,7 @@ class xmlArray
 	 * of elements, an array of xmlArray's is returned for use with foreach.
 	 * Example use:
 	 *  foreach ($xml->set('html/body/p') as $p)
-	 * @param $path string The path to search for.
+	 * @param string $path string The path to search for.
 	 * @return array An array of xmlArray objects
 	 */
 	public function set($path)
@@ -855,7 +855,7 @@ class ftp_connection
 	 * Changes a files atrributes (chmod)
 	 *
 	 * @param string $ftp_file The file to CHMOD
-	 * @param int|string $chmod The value for the CHMOD operation
+	 * @param integer $chmod The value for the CHMOD operation
 	 * @return boolean Whether or not the operation was successful
 	 */
 	public function chmod($ftp_file, $chmod)
@@ -1025,7 +1025,7 @@ class ftp_connection
 	 *
 	 * @param string $ftp_path The path to the directory
 	 * @param bool $search Whether or not to get a recursive directory listing
-	 * @return string|boolean The results of the command or false if unsuccessful
+	 * @return false|string The results of the command or false if unsuccessful
 	 */
 	public function list_dir($ftp_path = '', $search = false)
 	{
@@ -1070,7 +1070,7 @@ class ftp_connection
 	 *
 	 * @param string $file The name of a file
 	 * @param string $listing A directory listing or null to generate one
-	 * @return string|boolean The name of the file or false if it wasn't found
+	 * @return string|false The name of the file or false if it wasn't found
 	 */
 	public function locate($file, $listing = null)
 	{

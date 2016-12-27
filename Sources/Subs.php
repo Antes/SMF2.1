@@ -676,7 +676,7 @@ function constructPageIndex($base_url, &$start, $max_value, $num_per_page, $flex
  * - caches the formatting data from the setting for optimization.
  *
  * @param float $number A number
- * @param bool|int $override_decimal_count If set, will use the specified number of decimal places. Otherwise it's automatically determined
+ * @param integer $override_decimal_count If set, will use the specified number of decimal places. Otherwise it's automatically determined
  * @return string A formatted number
  */
 function comma_format($number, $override_decimal_count = false)
@@ -4987,7 +4987,7 @@ function smf_list_timezones()
 
 /**
  * @param string $ip_address An IP address in IPv4, IPv6 or decimal notation
- * @return binary The IP address in binary or false
+ * @return string The IP address in binary or false
  */
 function inet_ptod($ip_address)
 {
@@ -5385,7 +5385,7 @@ function isValidIP($IPString)
  * It assumes the data is already a string.
  * @param string $data The data to print
  * @param string $type The content type. Defaults to Json.
- * @return void
+ * @return false|null
  */
 function smf_serverResponse($data = '', $type = 'Content-Type: application/json')
 {

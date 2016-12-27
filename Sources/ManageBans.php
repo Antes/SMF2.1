@@ -929,7 +929,7 @@ function saveTriggers($suggestions = array(), $ban_group, $member = 0, $ban_id =
  * Doesn't clean the inputs
  *
  * @param array $items_ids The items to remove
- * @param bool|int $group_id The ID of the group these triggers are associated with or false if deleting them from all groups
+ * @param integer $group_id The ID of the group these triggers are associated with or false if deleting them from all groups
  * @return bool Always returns true
  */
 function removeBanTriggers($items_ids = array(), $group_id = false)
@@ -1123,7 +1123,7 @@ function removeBanLogs($ids = array())
  * Errors in $context['ban_errors']
  *
  * @param array $triggers The triggers to validate
- * @return array An array of riggers and log info ready to be used
+ * @return integer An array of riggers and log info ready to be used
  */
 function validateTriggers(&$triggers)
 {
