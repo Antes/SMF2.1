@@ -44,6 +44,10 @@ class gif_lzw_compression
 		$this->Buf   = range(0, 279);
 	}
 
+	/**
+	 * @param string $data
+	 * @param integer $datLen
+	 */
 	public function decompress($data, &$datLen)
 	{
 		$stLen  = strlen($data);
@@ -63,6 +67,11 @@ class gif_lzw_compression
 		return $ret;
 	}
 
+	/**
+	 * @param boolean $bInit
+	 *
+	 * @return integer
+	 */
 	public function LZWCommand(&$data, $bInit)
 	{
 		if ($bInit)
@@ -253,6 +262,10 @@ class gif_color_table
 		unset($this->m_nColors, $this->m_arColors);
 	}
 
+	/**
+	 * @param string $lpData
+	 * @param integer $num
+	 */
 	public function load($lpData, $num)
 	{
 		$this->m_nColors  = 0;
@@ -324,6 +337,9 @@ class gif_file_header
 		unset($this->m_bSorted, $this->m_nTableSize, $this->m_nBgColor, $this->m_nPixelRatio, $this->m_colorTable);
 	}
 
+	/**
+	 * @param integer $hdrLen
+	 */
 	public function load($lpData, &$hdrLen)
 	{
 		$hdrLen = 0;
@@ -370,6 +386,10 @@ class gif_image_header
 		unset($this->m_bInterlace, $this->m_bSorted, $this->m_nTableSize, $this->m_colorTable);
 	}
 
+	/**
+	 * @param string $lpData
+	 * @param integer $hdrLen
+	 */
 	public function load($lpData, &$hdrLen)
 	{
 		$hdrLen = 0;
@@ -412,6 +432,10 @@ class gif_image
 		$this->m_lzw = new gif_lzw_compression();
 	}
 
+	/**
+	 * @param string $data
+	 * @param integer $datLen
+	 */
 	public function load($data, &$datLen)
 	{
 		$datLen = 0;
@@ -464,6 +488,10 @@ class gif_image
 		return false;
 	}
 
+	/**
+	 * @param string $data
+	 * @param integer $extLen
+	 */
 	public function skipExt(&$data, &$extLen)
 	{
 		$extLen = 0;

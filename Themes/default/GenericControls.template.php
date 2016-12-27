@@ -227,7 +227,7 @@ function template_control_richedit_buttons($editor_id)
  * @param int|string $verify_id The verification control ID
  * @param string $display_type What type to display. Can be 'single' to only show one verification option or 'all' to show all of them
  * @param bool $reset Whether to reset the internal tracking counter
- * @return bool False if there's nothing else to show, true if $display_type is 'single', nothing otherwise
+ * @return boolean|null False if there's nothing else to show, true if $display_type is 'single', nothing otherwise
  */
 function template_control_verification($verify_id, $display_type = 'all', $reset = false)
 {

@@ -558,7 +558,7 @@ function smf_db_transaction($type = 'commit', $connection = null)
  * Backtrace, log, try to fix.
  *
  * @param string $db_string The DB string
- * @param object $connection The connection to use (if null, $db_connection is used)
+ * @param resource $connection The connection to use (if null, $db_connection is used)
  */
 function smf_db_error($db_string, $connection = null)
 {
@@ -753,7 +753,7 @@ function smf_db_error($db_string, $connection = null)
  * @param array $data The data to insert
  * @param array $keys The keys for the table
  * @param bool $disable_trans Whether to disable transactions
- * @param object $connection The connection to use (if null, $db_connection is used)
+ * @param resource $connection The connection to use (if null, $db_connection is used)
  */
 function smf_db_insert($method = 'replace', $table, $columns, $data, $keys, $disable_trans = false, $connection = null)
 {

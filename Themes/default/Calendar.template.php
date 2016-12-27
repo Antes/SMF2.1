@@ -60,7 +60,7 @@ function template_main()
  *
  * @param string $grid_name The grid name
  * @param bool $is_mini Is this a mini grid?
- * @return void|bool Returns false if the grid doesn't exist.
+ * @return false|null Returns false if the grid doesn't exist.
  */
 function template_show_month_grid($grid_name, $is_mini = false)
 {
@@ -312,7 +312,7 @@ function template_show_month_grid($grid_name, $is_mini = false)
  * Shows a weekly grid
  *
  * @param string $grid_name The name of the grid
- * @return void|bool Returns false if the grid doesn't exist
+ * @return false|null Returns false if the grid doesn't exist
  */
 function template_show_week_grid($grid_name)
 {

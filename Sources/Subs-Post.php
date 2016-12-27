@@ -2265,7 +2265,7 @@ function modifyPost(&$msgOptions, &$topicOptions, &$posterOptions)
  * @param array $msgs Array of message ids
  * @param bool $approve Whether to approve the posts (if false, posts are unapproved)
  * @param bool $notify Whether to notify users
- * @return bool Whether the operation was successful
+ * @return null|boolean Whether the operation was successful
  */
 function approvePosts($msgs, $approve = true, $notify = true)
 {
@@ -2518,7 +2518,7 @@ function approvePosts($msgs, $approve = true, $notify = true)
  *
  * @param array $topics Array of topic ids
  * @param bool $approve Whether to approve the topics. If false, unapproves them instead
- * @return bool Whether the operation was successful
+ * @return null|boolean Whether the operation was successful
  */
 function approveTopics($topics, $approve = true)
 {
@@ -2908,7 +2908,7 @@ function spell_init()
  *
  * @param resource $dict An enchant or pspell dictionary resource set up by {@link spell_init()}
  * @param string $word A word to check the spelling of
- * @return bool Whether or not the specified word is spelled properly
+ * @return boolean|null Whether or not the specified word is spelled properly
  */
 function spell_check($dict, $word)
 {

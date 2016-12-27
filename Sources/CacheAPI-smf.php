@@ -180,7 +180,7 @@ class smf_cache extends cache_api
 	 *
 	 * @access public
 	 * @param string $dir A valid path
-	 * @return boolean If this was successful or not.
+	 * @return boolean|null If this was successful or not.
 	 */
 	public function setCachedir($dir = null)
 	{

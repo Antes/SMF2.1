@@ -2241,9 +2241,9 @@ function loadTheme($id_theme = 0, $initialize = true)
  *
  * @uses the template_include() function to include the file.
  * @param string $template_name The name of the template to load
- * @param array|string $style_sheets The name of a single stylesheet or an array of names of stylesheets to load
+ * @param string $style_sheets The name of a single stylesheet or an array of names of stylesheets to load
  * @param bool $fatal If true, dies with an error message if the template cannot be found
- * @return boolean Whether or not the template was loaded
+ * @return boolean|null Whether or not the template was loaded
  */
 function loadTemplate($template_name, $style_sheets = array(), $fatal = true)
 {
@@ -2426,7 +2426,7 @@ function loadCSSFile($fileName, $params = array(), $id = '')
  * - all code added with this function is added to the same <style> tag so do make sure your css is valid!
  *
  * @param string $css Some css code
- * @return void|bool Adds the CSS to the $context['css_header'] array or returns if no CSS is specified
+ * @return false|null Adds the CSS to the $context['css_header'] array or returns if no CSS is specified
  */
 function addInlineCss($css)
 {
@@ -2442,7 +2442,7 @@ function addInlineCss($css)
 /**
  * Add a Javascript file for output later
 
- * @param string $filename The name of the file to load
+ * @param string $fileName The name of the file to load
  * @param array $params An array of parameter info
  * Keys are the following:
  * 	- ['external'] (true/false): define if the file is a externally located file. Needs to be set to true if you are loading an external file
@@ -2540,7 +2540,7 @@ function addJavaScriptVar($key, $value, $escape = false)
  *
  * @param string $javascript Some JS code
  * @param bool $defer Whether the script should load in <head> or before the closing <html> tag
- * @return void|bool Adds the code to one of the $context['javascript_inline'] arrays or returns if no JS was specified
+ * @return false|null Adds the code to one of the $context['javascript_inline'] arrays or returns if no JS was specified
  */
 function addInlineJavaScript($javascript, $defer = false)
 {

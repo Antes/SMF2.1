@@ -456,7 +456,6 @@ function smf_db_query($identifier, $db_string, $db_values = array(), $connection
 
 /**
  * affected_rows
- * @param resource $connection
  */
 function smf_db_affected_rows($result = null)
 {
@@ -799,7 +798,7 @@ function smf_db_insert($method = 'replace', $table, $columns, $data, $keys, $dis
  *
  * @param string $db_name The database name
  * @param resource $db_connection The database connection
- * @return true Always returns true
+ * @return boolean Always returns true
  */
 function smf_db_select_db($db_name, $db_connection)
 {

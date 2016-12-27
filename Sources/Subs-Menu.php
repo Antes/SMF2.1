@@ -286,7 +286,7 @@ function createMenu($menuData, $menuOptions = array())
 /**
  * Delete a menu.
  * @param string $menu_id The ID of the menu to destroy or 'last' for the most recent one
- * @return bool|void False if the menu doesn't exist, nothing otherwise
+ * @return false|null False if the menu doesn't exist, nothing otherwise
  */
 function destroyMenu($menu_id = 'last')
 {

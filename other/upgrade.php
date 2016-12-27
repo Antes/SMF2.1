@@ -207,6 +207,9 @@ if (!function_exists('clean_cache'))
 // MD5 Encryption.
 if (!function_exists('md5_hmac'))
 {
+	/**
+	 * @param string $key
+	 */
 	function md5_hmac($data, $key)
 	{
 		if (strlen($key) > 64)
@@ -441,6 +444,9 @@ function upgradeExit($fallThrough = false)
 }
 
 // Used to direct the user to another location.
+/**
+ * @param string $location
+ */
 function redirectLocation($location, $addForm = true)
 {
 	global $upgradeurl, $upcontext, $command_line;
@@ -2128,6 +2134,9 @@ function fixRelativePath($path)
 	return addslashes(preg_replace(array('~^\.([/\\\]|$)~', '~[/]+~', '~[\\\]+~', '~[/\\\]$~'), array($install_path . '$1', '/', '\\', ''), $path));
 }
 
+/**
+ * @param string $filename
+ */
 function parse_sql($filename)
 {
 	global $db_prefix, $db_collation, $boarddir, $boardurl, $command_line, $file_steps, $step_progress, $custom_warning;
@@ -2414,6 +2423,9 @@ function parse_sql($filename)
 	return true;
 }
 
+/**
+ * @param string $string
+ */
 function upgrade_query($string, $unbuffered = false)
 {
 	global $db_connection, $db_server, $db_user, $db_passwd, $db_type, $command_line, $upcontext, $upgradeurl, $modSettings;
@@ -3043,6 +3055,9 @@ Usage: /path/to/php -f ' . basename(__FILE__) . ' -- [OPTION]...
 	$upcontext['current_step'] = 1;
 }
 
+/**
+ * @param string $message
+ */
 function print_error($message, $fatal = false)
 {
 	static $fp = null;
@@ -3056,6 +3071,9 @@ function print_error($message, $fatal = false)
 		exit;
 }
 
+/**
+ * @param string $message
+ */
 function throw_error($message)
 {
 	global $upcontext;

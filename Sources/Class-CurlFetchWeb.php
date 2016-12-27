@@ -62,7 +62,7 @@ class curl_fetch_web_data
 	* Start the curl object
 	* - allow for user override values
 	*
-	* @param array $options An array of cURL options
+	* @param integer[] $options An array of cURL options
 	* @param int $max_redirect Maximum number of redirects
 	* @return void
 	*/
@@ -81,8 +81,8 @@ class curl_fetch_web_data
 	*  - calls set_options to set the curl opts array values based on the defaults and user input
 	*
 	* @param string $url the site we are going to fetch
-	* @param array $post_data any post data as form name => value
-	* @return object An instance of the curl_fetch_web_data class
+	* @param string $post_data any post data as form name => value
+	* @return curl_fetch_web_data An instance of the curl_fetch_web_data class
 	*/
 	public function get_url_data($url, $post_data = array())
 	{
@@ -106,7 +106,7 @@ class curl_fetch_web_data
 	*
 	* @param string $url The site to fetch
 	* @param bool $redirect Whether or not this was a redirect request
-	* @return void|bool Sets various properties of the class or returns false if the URL isn't specified
+	* @return false|null Sets various properties of the class or returns false if the URL isn't specified
 	*/
 	private function curl_request($url, $redirect = false)
 	{

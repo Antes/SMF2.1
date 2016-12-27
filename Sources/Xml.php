@@ -80,7 +80,7 @@ function ListMessageIcons()
 /**
  * Handles retrieving previews of news items, newsletters, signatures and warnings.
  * Calls the appropriate function based on $_POST['item']
- * @return void|bool Returns false if $_POST['item'] isn't set or isn't valid
+ * @return false|null Returns false if $_POST['item'] isn't set or isn't valid
  */
 function RetrievePreview()
 {

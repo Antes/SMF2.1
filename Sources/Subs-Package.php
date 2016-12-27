@@ -28,7 +28,7 @@ if (!defined('SMF'))
  * @param bool $single_file If true returns the contents of the file specified by destination if it exists
  * @param bool $overwrite Whether to overwrite existing files
  * @param null|array $files_to_extract Specific files to extract
- * @return array|false An array of information about extracted files or false on failure
+ * @return string An array of information about extracted files or false on failure
  */
 function read_tgz_file($gzfilename, $destination, $single_file = false, $overwrite = false, $files_to_extract = null)
 {
@@ -59,7 +59,7 @@ function read_tgz_file($gzfilename, $destination, $single_file = false, $overwri
  * @param bool $single_file Whether to only extract a single file
  * @param bool $overwrite Whether to overwrite existing data
  * @param null|array $files_to_extract If set, only extracts the specified files
- * @return array|false An array of information about the extracted files or false on failure
+ * @return string An array of information about the extracted files or false on failure
  */
 function read_tgz_data($gzfilename, $destination, $single_file = false, $overwrite = false, $files_to_extract = null)
 {
@@ -3251,7 +3251,7 @@ if (!function_exists('smf_crc32'))
 	 * http://www.php.net/crc32#79567
 	 *
 	 * @param string $number
-	 * @return string The crc32
+	 * @return integer The crc32
 	 */
 	function smf_crc32($number)
 	{

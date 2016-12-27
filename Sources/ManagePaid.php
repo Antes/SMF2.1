@@ -1452,7 +1452,7 @@ function reapplySubscriptions($users)
  *
  * @param int $id_subscribe The subscription ID
  * @param int $id_member The ID of the member
- * @param int|string $renewal 0 if we're forcing start/end time, otherwise a string indicating how long to renew the subscription for ('D', 'W', 'M' or 'Y')
+ * @param integer $renewal 0 if we're forcing start/end time, otherwise a string indicating how long to renew the subscription for ('D', 'W', 'M' or 'Y')
  * @param int $forceStartTime If set, forces the subscription to start at the specified time
  * @param int $forceEndTime If set, forces the subscription to end at the specified time
  */

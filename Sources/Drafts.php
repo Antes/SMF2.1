@@ -175,7 +175,7 @@ function SaveDraft(&$post_errors)
  *
  * @param string $post_errors A string of info about errors encountered trying to save this draft
  * @param array $recipientList An array of data about who this PM is being sent to
- * @return boolean false if you can't save the draft, true if we're doing this via XML more than 5 seconds after the last save, nothing otherwise
+ * @return boolean|null false if you can't save the draft, true if we're doing this via XML more than 5 seconds after the last save, nothing otherwise
  */
 function SavePMDraft(&$post_errors, $recipientList)
 {
@@ -393,7 +393,7 @@ function ReadDraft($id_draft, $type = 0, $check = true, $load = false)
  *
  * @param int $id_draft The ID of the draft to delete
  * @param boolean $check Whether or not to check that the draft belongs to the current user
- * @return boolean False if it couldn't be deleted (doesn't return anything otherwise)
+ * @return false|null False if it couldn't be deleted (doesn't return anything otherwise)
  */
 function DeleteDraft($id_draft, $check = true)
 {
@@ -427,7 +427,7 @@ function DeleteDraft($id_draft, $check = true)
  * @param int $member_id ID of the member to show drafts for
  * @param boolean|integer If $type is 1, this can be set to only load drafts for posts in the specific topic
  * @param int $draft_type The type of drafts to show - 0 for post drafts, 1 for PM drafts
- * @return boolean False if the drafts couldn't be loaded, nothing otherwise
+ * @return false|null False if the drafts couldn't be loaded, nothing otherwise
  */
 function ShowDrafts($member_id, $topic = false, $draft_type = 0)
 {
@@ -511,7 +511,7 @@ function XmlDraft($id_draft)
  * Allows for the deleting and loading/editing of drafts
  *
  * @param type $memID
- * @param type $draft_type
+ * @param integer $draft_type
  */
 function showProfileDrafts($memID, $draft_type = 0)
 {
@@ -664,7 +664,7 @@ function showProfileDrafts($memID, $draft_type = 0)
  * Uses the showpmdraft template
  * Allows for the deleting and loading/editing of drafts
  *
- * @param type $memID
+ * @param integer $memID
  */
 function showPMDrafts($memID = -1)
 {

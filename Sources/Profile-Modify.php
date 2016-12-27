@@ -2183,7 +2183,7 @@ function alert_mark($memID, $toMark, $read = 0)
  * Deletes a single or a group of alerts by ID
  *
  * @param int|array The ID of a single alert to delete or an array containing the IDs of multiple alerts. The function will convert integers into an array for better handling.
- * @param bool|int $memID The user ID. Used to update the user unread alerts count.
+ * @param integer $memID The user ID. Used to update the user unread alerts count.
  * @return void|int If the $memID param is set, returns the new amount of unread alerts.
  */
 function alert_delete($toDelete, $memID = false)
@@ -2839,7 +2839,7 @@ function profileLoadLanguages()
 /**
  * Handles the "manage groups" section of the profile
  *
- * @return true Always returns true
+ * @return boolean Always returns true
  */
 function profileLoadGroups()
 {
@@ -2896,7 +2896,7 @@ function profileLoadGroups()
 /**
  * Load key signature context data.
  *
- * @return true Always returns true
+ * @return boolean Always returns true
  */
 function profileLoadSignatureData()
 {
@@ -2960,7 +2960,7 @@ function profileLoadSignatureData()
 /**
  * Load avatar context data.
  *
- * @return true Always returns true
+ * @return boolean Always returns true
  */
 function profileLoadAvatarData()
 {
@@ -3033,7 +3033,7 @@ function profileLoadAvatarData()
  * Save a members group.
  *
  * @param int &$value The ID of the (new) primary group
- * @return true Always returns true
+ * @return boolean Always returns true
  */
 function profileSaveGroups(&$value)
 {
@@ -3138,7 +3138,7 @@ function profileSaveGroups(&$value)
  * @todo argh, the avatar here. Take this out of here!
  *
  * @param string &$value What kind of avatar we're expecting. Can be 'none', 'server_stored', 'gravatar', 'external' or 'upload'
- * @return bool|string False if success (or if memID is empty and password authentication failed), otherwise a string indicating what error occurred
+ * @return false|string False if success (or if memID is empty and password authentication failed), otherwise a string indicating what error occurred
  */
 function profileSaveAvatarData(&$value)
 {

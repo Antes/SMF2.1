@@ -170,7 +170,7 @@ function createThumbnail($source, $max_width, $max_height)
  *
  * @param string $fileName The path to the file
  * @param int $preferred_format The preferred format - 0 to automatically determine, 1 for gif, 2 for jpg, 3 for png, 6 for bmp and 15 for wbmp
- * @return boolean Whether the reencoding was successful
+ * @return false|null Whether the reencoding was successful
  */
 function reencodeImage($fileName, $preferred_format = 0)
 {

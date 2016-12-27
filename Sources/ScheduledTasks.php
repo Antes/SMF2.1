@@ -807,7 +807,7 @@ function scheduled_weekly_digest()
 /**
  * Send a group of emails from the mail queue.
  *
- * @param bool|int $number The number to send each loop through or false to use the standard limits
+ * @param integer $number The number to send each loop through or false to use the standard limits
  * @param bool $override_limit Whether to bypass the limit
  * @param bool $force_send Whether to forcibly send the messages now (useful when using cron jobs)
  * @return bool Whether things were sent

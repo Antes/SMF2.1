@@ -1717,7 +1717,7 @@ function ssi_news($output_method = 'echo')
 /**
  * Show today's birthdays.
  * @param string $output_method The output method. If 'echo', displays a list of users, otherwise returns an array of info about them.
- * @return void|array Displays a list of users or returns an array of info about them depending on output_method.
+ * @return null|string Displays a list of users or returns an array of info about them depending on output_method.
  */
 function ssi_todaysBirthdays($output_method = 'echo')
 {
@@ -1746,7 +1746,7 @@ function ssi_todaysBirthdays($output_method = 'echo')
 /**
  * Shows today's holidays.
  * @param string $output_method The output method. If 'echo', displays a list of holidays, otherwise returns an array of info about them.
- * @return void|array Displays a list of holidays or returns an array of info about them depending on output_method
+ * @return null|string Displays a list of holidays or returns an array of info about them depending on output_method
  */
 function ssi_todaysHolidays($output_method = 'echo')
 {
@@ -1773,7 +1773,7 @@ function ssi_todaysHolidays($output_method = 'echo')
 
 /**
  * @param string $output_method The output method. If 'echo', displays a list of events, otherwise returns an array of info about them.
- * @return void|array Displays a list of events or returns an array of info about them depending on output_method
+ * @return null|string Displays a list of events or returns an array of info about them depending on output_method
  */
 function ssi_todaysEvents($output_method = 'echo')
 {
@@ -1807,7 +1807,7 @@ function ssi_todaysEvents($output_method = 'echo')
 /**
  * Shows today's calendar items (events, birthdays and holidays)
  * @param string $output_method The output method. If 'echo', displays a list of calendar items, otherwise returns an array of info about them.
- * @return void|array Displays a list of calendar items or returns an array of info about them depending on output_method
+ * @return null|string Displays a list of calendar items or returns an array of info about them depending on output_method
  */
 function ssi_todaysCalendar($output_method = 'echo')
 {
@@ -2198,7 +2198,7 @@ function ssi_recentEvents($max_events = 7, $output_method = 'echo')
  * @param int|string $id The ID or username of a user
  * @param string $password The password to check
  * @param bool $is_username If true, treats $id as a username rather than a user ID
- * @return bool Whether or not the password is correct.
+ * @return null|boolean Whether or not the password is correct.
  */
 function ssi_checkPassword($id = null, $password = null, $is_username = false)
 {
